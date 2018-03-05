@@ -238,7 +238,7 @@ export default class PriceScene extends Component {
     buildInfo.selectedChoice = value;
     this.setState({buildInfo});
 
-    Actions.ConsultScene({buildInfo:buildInfo});
+    Actions.consult({buildInfo:buildInfo});
   };
 
   _getMaruClickEvent = (key) => {
