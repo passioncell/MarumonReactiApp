@@ -316,7 +316,7 @@ export default class PriceScene extends Component {
   render() {
 
     return (
-      <ScrollView style={{padding: 10, backgroundColor:'#fff'}}>
+      <ScrollView style={{padding: 10, backgroundColor:'white'}}>
 
         <Text style={styles.titleText}>■ 시공종류</Text>
         <View style={styles.optionLineArea}>
@@ -481,15 +481,15 @@ const styles = StyleSheet.create({
     width: 150,
     flex: 1,
     fontSize: 15,
-    color: '#333',
-    backgroundColor: '#fff',
+    color: '#333333',
+    backgroundColor: 'white',
     borderRadius: 7,
     padding: 5,
     marginRight: 12,
     marginTop: 10,
     marginBottom: 10,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: 'black',
     justifyContent: 'center',
   },
   BuildTypeActiveBtn: {
@@ -497,7 +497,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 15,
     color: '#5c34b7',
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     borderRadius: 7,
     padding: 5,
     marginRight: 12,
@@ -511,15 +511,15 @@ const styles = StyleSheet.create({
     width: 100,
     flex: 1,
     fontSize: 15,
-    color: '#333',
-    backgroundColor: '#fff',
+    color: '#333333',
+    backgroundColor: 'white',
     borderRadius: 7,
     padding: 5,
     marginRight: 12,
     marginTop: 10,
     marginBottom: 10,
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: 'black',
     justifyContent: 'center',
   },
 
@@ -528,7 +528,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 15,
     color: '#5c34b7',
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     borderRadius: 7,
     padding: 5,
     marginRight: 12,
@@ -540,14 +540,14 @@ const styles = StyleSheet.create({
   },
   PriceResultBox: {
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     marginBottom: 50,
     marginTop: 20,
     justifyContent: 'center',
   },
   PriceResultBtn: {
-    color: '#fff',
+    color: 'white',
     fontSize: 15,
     backgroundColor: '#5c34b7',
     padding: 10,

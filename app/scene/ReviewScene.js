@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Text, Alert, FlatList, Image, TouchableHighlight} from 'react-native';
+import {View, StyleSheet, Text, Alert, FlatList, Image, TouchableHighlight } from 'react-native';
 import {List, ListItem} from 'react-native-elements';
 import {Actions} from 'react-native-router-flux';
+import {hostURL, getReviewList} from "../api/base";
 
-const apiBaseUrl = "http://10.0.2.2:3000/";
 
 export default class ReviewScene extends Component {
 
@@ -56,7 +56,7 @@ export default class ReviewScene extends Component {
   };
 
   _getReviewList = (pageNumber) => {
-    const url = apiBaseUrl + 'review/mobile/list?pageNumber=' + pageNumber;
+    const url = getReviewList(pageNumber);
     return fetch(url)
       .then((res) => {
         return res.json();
@@ -116,6 +116,7 @@ export default class ReviewScene extends Component {
 
 class ReviewListItem extends Component {
   render() {
+
     return (
       <View style={{padding: 10, flexDirection: 'row'}}>
         <TouchableHighlight onPress={() => {
@@ -123,7 +124,7 @@ class ReviewListItem extends Component {
         }}>
           <Image
             style={{width: 100, height: 100}}
-            source={{uri: apiBaseUrl + 'uploads/thumnail/' + this.props.thumnail}}/>
+            source={{uri: hostURL + 'uploads/thumnail/' + this.props.thumnail}}/>
         </TouchableHighlight>
         <View style={{flexDirection: 'column', padding: 10}}>
           <Text style={{marginBottom: 2}}>{this.props.title}</Text>
@@ -135,12 +136,3 @@ class ReviewListItem extends Component {
     )
   }
 }
-
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});

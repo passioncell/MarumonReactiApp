@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {View, StyleSheet, Text, TextInput, Button} from 'react-native';
 import CheckBox from 'react-native-checkbox';
-
-const apiBaseUrl = "http://10.0.2.2:3000/";
+import {hostURL, getPostEstimateUrl} from "../api/base";
 
 export default class ConsultScene extends Component {
 
@@ -43,7 +42,7 @@ export default class ConsultScene extends Component {
 
   _sendConsultForm = () => {
 
-    fetch(apiBaseUrl+'estimate/m_consult.do', {
+    fetch(getPostEstimateUrl(), {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -156,6 +155,6 @@ const styles = StyleSheet.create({
   root: {
     padding: 20,
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: 'white'
   }
 });
